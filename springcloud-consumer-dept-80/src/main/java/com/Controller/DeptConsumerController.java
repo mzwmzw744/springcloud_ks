@@ -13,7 +13,8 @@ public class DeptConsumerController {
     @Resource
     private RestTemplate restTemplate;
 
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+//    private static final String REST_URL_PREFIX = "http://localhost:8001";
+      private static final String REST_URL_PREFIX = "http://springcloud-proviter-dept";
 
 
     @RequestMapping("/consumer/dept/add")

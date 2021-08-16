@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8003
 mybatis:
   type-aliases-package: com.pojo
   config-location: classpath:mybatis/mybatis-config.xml
@@ -10,8 +10,8 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://172.81.214.63:3306/cs01
-    username: cs01
+    url: jdbc:mysql://172.81.214.63:3306/cs04
+    username: cs04
     password: cs1234
 
 #Eureka的配置，服务注册到哪里
@@ -20,7 +20,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
   instance:
-    instance-id: springcloud-priovider-dept8001
+    instance-id: springcloud-priovider-dept8003
 
 #info配置
 info:
