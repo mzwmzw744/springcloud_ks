@@ -1,6 +1,7 @@
 package com.feign;
 
 import com.pojo.Dept;
+import com.service.DeptConsumerFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
-@FeignClient(value = "SPRINGCLOUD-PROVITER-DEPT")
+@FeignClient(value = "SPRINGCLOUD-PROVITER-DEPT",fallbackFactory = DeptConsumerFallback.class)
 @Component
 public interface DeptFeign {
 

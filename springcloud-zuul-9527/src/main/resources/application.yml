@@ -1,0 +1,22 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: springcloud-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
+  instance:
+    instance-id: zuul9527.com
+    prefer-ip-address: true
+
+info:
+  app.name: mzw-springcloud
+  company.name: mzw.com
+
+zuul:
+  routes:
+    mydept.serviceId: springcloud-proviter-dept
+    mydept.path: /mydept/**
+  ignored-services: "*"  #不能再使用这个路径访问了
